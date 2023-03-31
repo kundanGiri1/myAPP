@@ -8,31 +8,24 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-row class="row" *ngFor="let a of itm" style="margin: 6px">
-        <ion-col size="2" class="box" style="
-        height: 30px;
-        width: 30px;
-        background-color: blueviolet;
-        margin: 2px;
-      ">
-            {{a}}
-        </ion-col>
-        <ion-col size="2" class="box" style="height: 30px; width: 30px; background-color: blueviolet">
-            1
-        </ion-col>
-        <ion-col size="2" class="box" style="height: 30px; width: 30px; background-color: blueviolet">
-            1
-        </ion-col>
-        <ion-col size="2" class="box" style="height: 30px; width: 30px; background-color: blueviolet">
-            1
-        </ion-col>
-        <ion-col size="2" class="box" style="height: 30px; width: 30px; background-color: blueviolet">
-            1
-        </ion-col>
-        <ion-col size="2" class="box" style="height: 30px; width: 30px; background-color: blueviolet">
-            1
-        </ion-col>
-    </ion-row>
+    <!-- <div class="box" *ngFor="let b of itm">
+        <ion-row class="row" style="margin: 6px" *ngFor="let a of itm">
+            <ion-col size="3" class="box" style="height: 30px; width: 30px; background-color: blueviolet">
+                {{a}}
+            </ion-col>
+        </ion-row>
+    </div> -->
+    <ion-grid fixed *ngFor="let b of itm" >
+        <ion-row style="background-color: blueviolet;" class="ion-margin">
+            <div class="colun" *ngFor="let a of itm" style="background-color: aquamarine;margin: 2px;">
+                <ion-col size="2" class="ion-margin">
+                      {{a}}
+                </ion-col>
+            </div>
+            
+        </ion-row>
+    </ion-grid>
+   
     <!-- <ion-row>
         <ion-col size="2" class="box" style="height: 30px; width: 30px; background-color: blueviolet ;">
             1
