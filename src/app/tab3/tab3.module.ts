@@ -7,9 +7,13 @@ import { Tab3Page } from './tab3.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab3PageRoutingModule } from './tab3-routing.module';
+import { ActivityServiceService } from '../activity-service.service';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   imports: [
+    // ActivityServiceService,
+    // HttpClient,
     IonicModule,
     CommonModule,
     FormsModule,
